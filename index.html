@@ -3,24 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <title>Hakikat Yolu - Havas İlmi</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome (ikonlar için) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      background-color: #0d0d1a;
+      color: #f5e6c4;
+    }
+    header {
+      background: linear-gradient(90deg, #2e0854, #000000);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    header img {
+      height: 80px;
+      margin-right: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: #ffd700;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      color: #f5e6c4;
+    }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #ffd700;
+      border-bottom: 1px solid #ffd700;
+      padding-bottom: 5px;
+    }
+    /* Kaynaklar sekmeleri */
+    .kaynaklar-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .tab-list {
+      flex: 1;
+      max-width: 200px;
+    }
+    .tab-list button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #2e0854;
+      color: #f5e6c4;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-weight: bold;
+    }
+    .tab-list button:hover {
+      background: #ffd700;
+      color: #000;
+    }
+    .tab-content {
+      flex: 3;
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 5px;
+      min-height: 200px;
+    }
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+    /* İletişim ikonları */
+    .contact-links {
+      margin-top: 20px;
+    }
+    .contact-links a {
+      display: inline-block;
+      margin: 5px;
+      font-size: 1.5em;
+      color: #ffd700;
+      text-decoration: none;
+    }
+    .contact-links a:hover {
+      color: #f5e6c4;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    /* Mobil uyum */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      header img {
+        margin: 0 0 10px 0;
+      }
+      .kaynaklar-container {
+        flex-direction: column;
+      }
+      .tab-list {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tab-list button {
+        flex: 1 1 45%;
+        margin: 5px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Hakikat Yolu</h1>
-    <p>Havas ilmi ve kadim sırların kapısı</p>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="about.html">Hakkında</a>
-      <a href="articles/esrarname.html">Makaleler</a>
-    </nav>
+    <!-- LOGO dosya adını doğru yazmalısın -->
+    <img src="logo.jpeg" alt="Hakikat Yolu Logo">
+    <div>
+      <h1>Havas İlmi</h1>
+      <p>Sirran Hoca</p>
+    </div>
   </header>
+
   <main>
-    <h2>Hoş Geldiniz</h2>
-    <p>Bu site, havas ilmi ve hakikat yoluna dair kadim bilgileri paylaşmak için açılmıştır.</p>
+    <section id="kaynaklar">
+      <h2>Kaynaklar</h2>
+      <div class="kaynaklar-container">
+        <!-- Sol tarafta sekmeler -->
+        <div class="tab-list">
+          <button data-target="nazar">Nazar</button>
+          <button data-target="buyu">Büyü Bozma</button>
+          <button data-target="musallat">Musallat</button>
+          <button data-target="vesvese">Vesvese</button>
+          <button data-target="ask">Aşk-Bağlama</button>
+          <button data-target="geri">Geri Getirme</button>
+        </div>
+        <!-- Sağ tarafta içerik -->
+        <div class="tab-content">
+          <div id="nazar" class="tab-pane active">
+            <h3>Nazar</h3>
+            <p>Sirran Hoca, nazarın olumsuz etkilerini gidermek için manevi destek ve uygulamalar sunar.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>          <div id="buyu" class="tab-pane">
+            <h3>Büyü Bozma</h3>
+            <p>Sirran Hoca, kötü niyetle yapılan büyülerin etkisini ortadan kaldırmak için manevi çözümler üretir.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div id="musallat" class="tab-pane">
+            <h3>Musallat</h3>
+            <p>Sirran Hoca, musallat durumlarında manevi koruma ve özel dualarla destek sağlar.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div id="vesvese" class="tab-pane">
+            <h3>Vesvese</h3>
+            <p>Sirran Hoca, vesveseden kurtulmak için zikir ve bilinç farkındalığı yöntemleri uygular.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div id="ask" class="tab-pane">
+            <h3>Aşk-Bağlama</h3>
+            <p>Sirran Hoca, aşk bağlama konusunda manevi yöntemlerle destek sunar.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div id="geri" class="tab-pane">
+            <h3>Geri Getirme</h3>
+            <p>Sirran Hoca, kaybolan veya uzaklaşan kişilerin geri dönmesi için manevi destek sağlar.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p>© 2026 Hakikat Yolu</p>
+    <p>© 2026 Hakikat Yolu - Havas İlmi | Sirran Hoca</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabButtons = document.querySelectorAll(".tab-list button");
+      const tabPanes = document.querySelectorAll(".tab-pane");
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-target");
+          tabPanes.forEach(pane => {
+            pane.classList.toggle("active", pane.id === target);
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
